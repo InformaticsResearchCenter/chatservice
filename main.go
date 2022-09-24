@@ -1,13 +1,13 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/InformaticsResearchCenter/chatservice/routes"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	router := gin.New()
-	router.GET("/", func(ctx *gin.Context) {
-		ctx.String(200, "Hello world")
-	})
-
+	routes.UserRoute(router)
 	router.Run(":5000")
 
 }

@@ -7,4 +7,5 @@ import (
 
 func ChatRoute(router *gin.Engine) {
 	router.POST("/chat", controllers.ChatController)
+	router.GET("/", controllers.HomeController)
 }

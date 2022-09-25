@@ -5,8 +5,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func ChatController(ctx *gin.Context) {
-	chat := models.Chat{Status: "true", Message: "Ganteng rolly"}
+func GetReply(ctx *gin.Context) {
+	var chat models.Chat
+	ctx.BindJSON(&chat)
+	chat.Status = "true"
 	ctx.JSON(200, &chat)
 }
 

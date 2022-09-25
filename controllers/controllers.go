@@ -11,8 +11,3 @@ func GetReply(ctx *gin.Context) {
 	chat.Status = "true"
 	ctx.JSON(200, &chat)
 }
-
-func HomeController(ctx *gin.Context) {
-	chat := models.Chat{Status: "true", Message: "Ganteng rolly"}
-	ctx.JSON(200, &chat)
-}

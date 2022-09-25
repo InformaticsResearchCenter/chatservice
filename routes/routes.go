@@ -5,6 +5,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func UserRoute(router *gin.Engine) {
-	router.GET("/", controllers.UserController)
+func ChatRoute(router *gin.Engine) {
+	router.POST("/chat", controllers.ChatController)
 }

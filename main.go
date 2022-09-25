@@ -7,7 +7,6 @@ import (
 
 func main() {
 	router := gin.New()
-	routes.UserRoute(router)
+	routes.ChatRoute(router)
 	router.Run(":5000")
-
 }
